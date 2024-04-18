@@ -2,3 +2,38 @@
     margin: 0;
     padding: 0;
 }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    border-radius: 5px;
+    width: min-content;
+    border: 2px solid grey;
+}
+
+.display{
+    width: min-content;
+    height: 50px;
+    width: 300px;
+    border: 1px solid black;
+}
+
+button{
+    padding: 8px 16px;
+    width: 60px;
+}
+
+.bottom-container{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 8px;
+    justify-content: space-between;
+    padding: 8px;
+}
