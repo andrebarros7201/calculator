@@ -69,11 +69,15 @@ operators.forEach(operator =>{
 
 const equals = document.querySelector('#equals');
 equals.addEventListener('click', () =>{
-    let result = Math.round(operate(Number(a), Number(b), operation) * 10) / 10;
+    if(!a || !operation || !b){
+        alert('Must choose all numbers and operation!');
+    }else{
+            let result = Math.round(operate(Number(a), Number(b), operation) * 10) / 10;
     console.log(result);
     a = result;
     b = '';
     bottomDisplay.textContent = result;
+    }
 })
 
 const clear = document.querySelector('#clear');
