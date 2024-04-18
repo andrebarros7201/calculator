@@ -33,9 +33,11 @@ const operate = (a, b, operator) => {
 const numbers = document.querySelectorAll('.number');
 const operators = document.querySelectorAll('.operator')
 
+const topDisplay = document.querySelector('#operation');
+const bottomDisplay = document.querySelector('#result');
+
 console.log(numbers);
 console.log(operators);
-
 
 numbers.forEach(number =>{
     number.addEventListener('click', () =>{
@@ -46,6 +48,7 @@ numbers.forEach(number =>{
             b += number.textContent;
             console.log('B:' + b);
         }
+        topDisplay.textContent = `${a} ${operation} ${b}`;
     })
 })
 
@@ -58,7 +61,11 @@ operators.forEach(operator =>{
 
 const equals = document.querySelector('#equals');
 equals.addEventListener('click', () =>{
-    console.log(operate(Number(a), Number(b), operation));
+    let result = Math.round(operate(Number(a), Number(b), operation) * 10) / 10;
+    console.log(result);
+    a = result;
+    b = '';
+    bottomDisplay.textContent = result;
 })
 
 const clear = document.querySelector('#clear');
@@ -66,4 +73,6 @@ clear.addEventListener('click', () =>{
     a = '';
     b = '';
     operation = '';
+    bottomDisplay.textContent = '';
+    topDisplay.textContent = '';
 })
