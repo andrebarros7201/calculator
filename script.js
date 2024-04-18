@@ -61,3 +61,9 @@ equals.addEventListener('click', () =>{
     console.log(operate(Number(a), Number(b), operation));
 })
 
+const clear = document.querySelector('#clear');
+clear.addEventListener('click', () =>{
+    a = '';
+    b = '';
+    operation = '';
+})
