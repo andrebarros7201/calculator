@@ -37,3 +37,11 @@ button{
     justify-content: space-between;
     padding: 8px;
 }
+
+.operator{
+    background-color: cadetblue;
+}
+
+.number{
+    background-color: brown;
+}
