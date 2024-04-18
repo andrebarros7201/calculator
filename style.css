@@ -22,9 +22,12 @@ body{
     width: min-content;
     height: 50px;
     width: 300px;
-    border: 1px solid black;
     font-size: larger;
     text-align: center;
+}
+
+.top-Container{
+    border: 2px solid grey;
 }
 
 button{

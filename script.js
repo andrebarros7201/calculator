@@ -1,7 +1,14 @@
 const add = (a, b) => a + b;
 const subtract = (a, b) => a - b;
 const multiply = (a, b) => a * b;
-const divide = (a, b) => a / b;
+const divide = (a, b) => {
+    if(b == 0){
+        alert('Cannot divide by ZERO!')
+        return '';
+    }else{
+        return a/b;
+    }
+};
 
 let a = '';
 let b = '';
@@ -56,6 +63,7 @@ operators.forEach(operator =>{
     operator.addEventListener('click', () =>{
         operation = operator.textContent;
         console.log(operation);
+        topDisplay.textContent = `${a} ${operation} ${b}`;
     })
 })
 
