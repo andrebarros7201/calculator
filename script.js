@@ -10,19 +10,19 @@ let operation = '';
 const operate = (a, b, operator) => {
     switch (operator) {
         case '+':
-            add(a, b);
+            return add(a, b);
             break;
 
         case '-':
-            subtract(a, b);
+            return subtract(a, b);
             break;
 
         case '*':
-            multiply(a, b);
+            return multiply(a, b);
             break;
 
         case '/':
-            divide(a, b);
+            return divide(a, b);
             break;
 
         default:
@@ -54,5 +54,10 @@ operators.forEach(operator =>{
         operation = operator.textContent;
         console.log(operation);
     })
+})
+
+const equals = document.querySelector('#equals');
+equals.addEventListener('click', () =>{
+    console.log(operate(Number(a), Number(b), operation));
 })
 
