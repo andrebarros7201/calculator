@@ -1,52 +1,123 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-    flex-flow: column wrap;
-    border-radius: 5px;
-    width: min-content;
-    border: 2px solid grey;
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.display{
-    width: min-content;
-    height: 50px;
-    width: 300px;
-    font-size: larger;
-    text-align: center;
+.container {
+  width: min-content;
+  height: min-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1rem;
+  grid-template-areas:
+    "operation operation operation operation"
+    "result result result result"
+    "7 8 9 sum"
+    "4 5 6 sub"
+    "1 2 3 product"
+    "0 clear equals division";
 }
 
-.top-Container{
-    border: 2px solid grey;
+button {
+  padding: 2rem 4rem;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 8rem;
+  font-size: 1rem;
+  background-color: white;
 }
 
-button{
-    padding: 8px 16px;
-    width: 60px;
+.container > div {
+  border: 2px solid black;
+  font-size: 2rem;
+  text-align: right;
+  border-radius: 2rem;
+  align-content: center;
+  padding-right: 1rem;
 }
 
-.bottom-container{
-    display: flex;
-    flex-flow: row wrap;
-    gap: 8px;
-    justify-content: space-between;
-    padding: 8px;
+.number {
+  background-color: chocolate;
 }
 
-.operator{
-    background-color: cadetblue;
+.operator {
+  background-color: bisque;
 }
 
-.number{
-    background-color: brown;
+#0 {
+  grid-area: 0;
+}
+
+#1 {
+  grid-area: 1;
+}
+
+#2 {
+  grid-area: 2;
+}
+
+#3 {
+  grid-area: 3;
+}
+
+#4 {
+  grid-area: 4;
+}
+
+#5 {
+  grid-area: 5;
+}
+
+#6 {
+  grid-area: 6;
+}
+
+#7 {
+  grid-area: 7;
+}
+#8 {
+  grid-area: 8;
+}
+
+#9 {
+  grid-area: 9;
+}
+#equals {
+  grid-area: equals;
+}
+
+#sum {
+  grid-area: sum;
+}
+
+#sub {
+  grid-area: sub;
+}
+
+#product {
+  grid-area: product;
+}
+
+#division {
+  grid-area: division;
+}
+
+#clear {
+  grid-area: clear;
+}
+
+#operation {
+  grid-area: operation;
+}
+
+#result {
+  grid-area: result;
 }
